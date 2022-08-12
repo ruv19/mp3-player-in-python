@@ -9,11 +9,10 @@ class MP3Calar():
 
     def sarkiSec(self):
         sayac=1
-            for sarki in self.sarkiListesi:
-                print("{}){}".format(sayac,sarki))
-                sayac+=1
+        for sarki in self.sarkiListesi:
+            print("{}){}".format(sayac,sarki))
+            sayac+=1
             secilenSarki = int(input("secmek istediğiniz şarkının numarasini giriniz:"))
-
             while secilenSarki <1 or secilenSarki >len(self.sarkiListesi):
                 secilenSarki = int(input("secmek istediğiniz şarkının doğru  numarasini giriniz(1-{}):".format(self.sarkiListesi)))
 
@@ -22,28 +21,28 @@ class MP3Calar():
     def sesArttir(self):
         if self.ses ==100:
                 pass
-            else:
-                self.ses+=10
+        else:
+            self.ses+=10
         
     def sesAzalt(self):
-         if self.ses==0:
+        if self.ses==0:
                 pass
-            else:
-                self.ses-=10
+        else:
+            self.ses-=10
     def rastgeleSarkiSec(self):
          rssec= choice(self.sarkiListesi)
-            self.suanCalanSarki = rssec
+         self.suanCalanSarki = rssec
     def sarkiEkle(self):
-         sanatci=input("sanatçıyı/grubu giriniz: ")
-            sarki=input("şarkıyı giriniz: ")
+        sanatci=input("sanatçıyı/grubu giriniz: ")
+        sarki=input("şarkıyı giriniz: ")
 
-            self.sarkiListesi.append(sanatci+ "-"+ sarki)
+        self.sarkiListesi.append(sanatci+ "-"+ sarki)
 
     def sarkiSil(self):
-         sayac=1
-            for sarki in self.sarkiListesi:
-                print("{}){}".format(sayac,sarki))
-                sayac+=1
+        sayac=1
+        for sarki in self.sarkiListesi:
+            print("{}){}".format(sayac,sarki))
+            sayac+=1
             silenecekSarki = int(input("silmek istediğiniz şarkının numarasini giriniz:"))
 
             while silenecekSarki <1 or silenecekSarki >len(self.sarkiListesi):
@@ -58,7 +57,6 @@ class MP3Calar():
 ŞARKI LİSTESİ:{}
 ŞU AN ÇALAN ŞARKI:{}
 SES DÜZEYİ:{}
-
 1)ŞARKI SEÇ
 2)SES ARTTIR
 3)SES AZALT
@@ -94,8 +92,6 @@ SES DÜZEYİ:{}
         if secim ==7 :
             self.kapa()
     
-
-
 mp3calar=MP3Calar()
 while mp3calar.durum:
     mp3calar.calistir()
